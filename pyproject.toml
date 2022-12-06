@@ -5,6 +5,8 @@ description = "Small package to try out Poetry and dynamic versioning"
 authors = ["José Loarca <jloarca@ehnusa.com>"]
 readme = "README.md"
 packages = [{include = "poetry_versioning"}]
+license = "MIT"
+homepage = "https://python-poetry.org/"
 
 [tool.poetry.dependencies]
 python = "^3.8"
