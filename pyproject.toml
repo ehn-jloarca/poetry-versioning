@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "poetry-versioning"
-version = "0.0.0"
+version = "1.0.4"
 description = "Small package to try out Poetry and dynamic versioning"
 authors = ["José Loarca <jloarca@ehnusa.com>"]
 readme = "README.md"
