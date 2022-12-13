@@ -4,6 +4,10 @@ import random
 import requests
 
 
+def foo():
+    return 'bar'
+
+
 def get_time(timezone):
     """
     Get the current time in a timezone
