@@ -1,17 +1,27 @@
 [tool.poetry]
 name = "poetry-versioning"
-version = "0.1.0"
+version = "0.0.0"
 description = "Small package to try out Poetry and dynamic versioning"
 authors = ["José Loarca <jloarca@ehnusa.com>"]
 readme = "README.md"
 packages = [{include = "poetry_versioning"}]
+license = "MIT"
+repository = "https://github.com/ehn-jloarca/poetry-versioning"
+
 
 [tool.poetry.dependencies]
 python = "^3.8"
 pytz = "^2022.6"
 requests = "^2.28.1"
 
-
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core", "poetry-dynamic-versioning"]
+build-backend = "poetry_dynamic_versioning.backend"
+
+[tool.poetry-dynamic-versioning.substitution]
+files = ["*.py", "*/__init__.py", "*/__version__.py", "*/_version.py"]
+
+[tool.poetry-dynamic-versioning]
+enable = true
+style = "pep440"
+format-jinja = """{{ serialize_pep440(bump_version(base), stage, revision)}}"""
